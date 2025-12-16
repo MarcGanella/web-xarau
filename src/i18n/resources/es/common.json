@@ -1,0 +1,12 @@
+{
+  "menu": {
+    "about": "¿Quiénes somos?",
+    "prices": "Precios",
+    "zones": "Zonas de examen"
+  },
+  "brand": "Autoescola Xarau",
+  "lang": {
+    "es": "ES",
+    "ca": "CA"
+  }
+}

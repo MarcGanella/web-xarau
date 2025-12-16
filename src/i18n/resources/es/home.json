@@ -1,0 +1,72 @@
+{
+  "hero": {
+    "title": "Arranca con XARAU",
+    "subtitle": "Vehículos preparados, profes con paciencia y horarios flexibles para que apruebes a la primera.",
+    "cta": "¡Infórmate!"
+  },
+  "benefits": {
+    "title": "Nuestras ventajas",
+    "items": [
+      {
+        "h": "Horarios amplios y flexibles",
+        "p": "Tu aprendizaje se adapta a tus necesidades y horarios."
+      },
+      {
+        "h": "Los mejores profesores",
+        "p": "Profes titulados con años de experiencia para enseñarte a conducir sin complicaciones."
+      },
+      {
+        "h": "Precios asequibles",
+        "p": "La mejor relación calidad-precio; política clara, sin sorpresas."
+      },
+      {
+        "h": "Medios e instalaciones",
+        "p": "Todo lo necesario para aprender más rápido y con comodidad."
+      },
+      {
+        "h": "Intensivos de teórica",
+        "p": "Cursos de 8 días, 2 horas diarias."
+      },
+      {
+        "h": "Tarjeta regalo",
+        "p": "Regala el permiso o clases prácticas con una tarjeta personalizada."
+      }
+    ]
+  },
+  "exams": {
+    "title": "Exámenes para permiso de coche (B)",
+    "what": {
+      "h": "¿En qué consiste?",
+      "items": [
+        "Examen teórico: 30 preguntas, máximo 3 fallos, 30 minutos.",
+        "Examen de circulación: en vías abiertas, demostrando conocimientos y aptitudes para conducir con seguridad."
+      ]
+    },
+    "where": {
+      "h": "¿Dónde se realizan?",
+      "items": [
+        "Teórico: Jefatura de Sabadell (carrer de l’Escola Industrial, 9, 2ª planta).",
+        "Circulación: zonas de examen en Sabadell y Terrassa (consulta «Zonas de examen»)."
+      ]
+    }
+  },
+  "contact": {
+    "title": "¡Infórmate! Contacta con nosotros",
+    "p": "Estamos a tu disposición para dudas sobre cursos, horarios o precios.",
+    "address": "C/ Magí Ramentol, 13 · 08191 Rubí",
+    "phoneLabel": "Teléfono",
+    "emailLabel": "Email",
+    "hoursLabel": "Horario",
+    "callNow": "Llamar ahora"
+  },
+  "about": {
+    "title": "Quiénes somos",
+    "p1": "En Autoescuela XARAU contamos con más de 30 años de experiencia formando conductores. Desde 2018 estamos en la calle Magí Ramentol 13, frente al Mercado Municipal de Rubí. Somos la segunda y tercera generación de esta empresa familiar, con un objetivo claro:",
+    "bullets": [
+      "Enseñanza de calidad y alto porcentaje de aprobados a la primera.",
+      "Teórica con profesor titulado.",
+      "Claridad y transparencia de principio a fin (precios y horarios claros).",
+      "Que el alumno se sienta cómodo y disfrute aprendiendo a conducir."
+    ]
+  }
+}
