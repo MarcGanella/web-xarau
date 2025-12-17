@@ -1,14 +1,9 @@
 import { useTranslation } from "react-i18next";
 import "./home.css";
 
-const base = (import.meta.env.BASE_URL || "/").replace(/\/?$/, "/");
-const url = (p) => base + String(p).replace(/^\//, "");
-
-const hero = {
-  mobile: url("hero-mobile.jpg"),
-  tablet: url("hero-tablet.jpg"),
-  desktop: url("hero-desktop.jpg"),
-};
+import heroMobile from "../assets/hero-mobile.jpg";
+import heroTablet from "../assets/hero-tablet.jpg";
+import heroDesktop from "../assets/hero-desktop.jpg";
 export default function Home() {
   const { t } = useTranslation("home");
 
@@ -22,9 +17,9 @@ export default function Home() {
       {/* HERO */}
       <section className="hero">
         <picture>
-          <source media="(min-width:1200px)" srcSet={hero.desktop} />
-          <source media="(min-width:768px)" srcSet={hero.tablet} />
-          <img src={hero.mobile} alt={t("hero.title")} loading="eager" />
+          <source media="(min-width:1200px)" srcSet={heroDesktop} />
+          <source media="(min-width:768px)" srcSet={heroTablet} />
+          <img src={heroMobile} alt={t("hero.title")} loading="eager" />
         </picture>
 
         <div className="container hero__content">
