@@ -1,12 +1,14 @@
 import { useTranslation } from "react-i18next";
 import "./home.css";
 
-const hero = {
-  mobile: "/hero-mobile.jpg",
-  tablet: "/hero-tablet.jpg",
-  desktop: "/hero-desktop.jpg",
-};
+const base = (import.meta.env.BASE_URL || "/").replace(/\/?$/, "/");
+const url = (p) => base + String(p).replace(/^\//, "");
 
+const hero = {
+  mobile: url("hero-mobile.jpg"),
+  tablet: url("hero-tablet.jpg"),
+  desktop: url("hero-desktop.jpg"),
+};
 export default function Home() {
   const { t } = useTranslation("home");
 
