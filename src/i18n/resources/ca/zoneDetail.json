@@ -1,0 +1,23 @@
+{
+  "breadcrumb": {
+    "home": "Inici",
+    "zones": "Zones d'examen",
+    "current": "Zona 3 Camp de Futbol"
+  },
+  "title": "Zona 3 Camp de Futbol",
+  "departure": {
+    "title": "Sortida Camp de Futbol",
+    "street": "Carrer de l'Apúlia",
+    "description1": "La sortida de la zona 3 està situada al costat del camp de futbol, al carrer de l'Apúlia. És un carrer de doble sentit.",
+    "description2": "En aquesta zona l'estacionament es realitza en un costat en línia i en l'altre en diagonal o oblic."
+  },
+  "dgtLinks": {
+    "title": "Enllaços de la DGT",
+    "safety": "Consells seguretat vial",
+    "test": "Test d'examen",
+    "qualification": "Qualificació examen teòric",
+    "points": "Permís per PUNTS",
+    "app": "Aplicació per a mòbil de la DGT"
+  },
+  "backButton": "← Tornar a Zones d'examen"
+}

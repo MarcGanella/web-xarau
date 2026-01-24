@@ -5,10 +5,11 @@ import Header from "./components/Header/Header";
 
 // Páginas
 import Home from "./pages/Home.jsx";
+import ZonasExamen from "./components/ZonasExamen/ZonasExamen.jsx";
+import ZonaDetalle from "./components/ZonasExamen/ZonaDetalle.jsx";
 
 // import About from "./pages/About.jsx";
 // import Precios from "./pages/Precios.jsx";
-// import Zonas from "./pages/Zonas.jsx";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -29,11 +30,12 @@ export default function App() {
         <main className="page">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/zonas" element={<ZonasExamen />} />
+            <Route path="/zonas/detalle" element={<ZonaDetalle />} />
 
             {/* cuando añadas el resto:
           <Route path="/quienes-somos" element={<About />} />
           <Route path="/precios" element={<Precios />} />
-          <Route path="/zonas" element={<Zonas />} />
           */}
 
             {/* 404 básico */}

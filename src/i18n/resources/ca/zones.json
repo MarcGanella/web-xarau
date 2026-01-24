@@ -1,0 +1,7 @@
+{
+  "title": "Zones d'examen",
+  "description": "Consulta les zones, mapes i fotos habituals d'examen pràctic.",
+  "searchPlaceholder": "Filtrar per ciutat / circuit (placeholder)",
+  "viewDetail": "Veure detall",
+  "noResults": "No s'han trobat zones que coincideixin amb la teva cerca."
+}
