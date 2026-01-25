@@ -7,10 +7,15 @@ import "./zonasExamen.css";
 export default function ZonasExamen() {
   const { t } = useTranslation("zones");
   const [searchTerm, setSearchTerm] = useState("");
+  const [selectedCity, setSelectedCity] = useState("barcelona");
 
-  const filteredZones = zonasExamenMock.filter((zona) =>
-    zona.ciudad.toLowerCase().includes(searchTerm.toLowerCase()),
-  );
+  const filteredZones = zonasExamenMock.filter((zona) => {
+    const matchesCity = zona.ciudad === selectedCity;
+    const matchesSearch =
+      zona.nombre.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      zona.descripcion.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCity && matchesSearch;
+  });
 
   return (
     <div className="zonas-examen">
@@ -19,7 +24,7 @@ export default function ZonasExamen() {
           <h1>{t("title")}</h1>
           <p className="zonas-examen__description">{t("description")}</p>
 
-          <div className="zonas-examen__search">
+          <div className="zonas-examen__search-container">
             <input
               type="text"
               placeholder={t("searchPlaceholder")}
@@ -27,6 +32,26 @@ export default function ZonasExamen() {
               onChange={(e) => setSearchTerm(e.target.value)}
               className="search-input"
             />
+            <div className="city-filters">
+              <button
+                className={`city-filter-btn ${selectedCity === "barcelona" ? "active" : ""}`}
+                onClick={() => setSelectedCity("barcelona")}
+              >
+                Zonas Barcelona
+              </button>
+              <button
+                className={`city-filter-btn ${selectedCity === "sabadell" ? "active" : ""}`}
+                onClick={() => setSelectedCity("sabadell")}
+              >
+                Zonas Sabadell
+              </button>
+              <button
+                className={`city-filter-btn ${selectedCity === "girona" ? "active" : ""}`}
+                onClick={() => setSelectedCity("girona")}
+              >
+                Zonas Girona
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -43,7 +68,7 @@ export default function ZonasExamen() {
                   <div className="zone-card__content">
                     <h3 className="zone-card__title">{zona.nombre}</h3>
                     <p className="zone-card__description">{zona.descripcion}</p>
-                    <Link to="/zonas/detalle" className="btn btn-detail">
+                    <Link to={`/zonas/${zona.slug}`} className="btn btn-detail">
                       {t("viewDetail")}
                     </Link>
                   </div>

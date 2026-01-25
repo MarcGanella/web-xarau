@@ -31,7 +31,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/zonas" element={<ZonasExamen />} />
-            <Route path="/zonas/detalle" element={<ZonaDetalle />} />
+            <Route path="/zonas/:slug" element={<ZonaDetalle />} />
 
             {/* cuando añadas el resto:
           <Route path="/quienes-somos" element={<About />} />

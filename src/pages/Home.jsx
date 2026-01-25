@@ -73,6 +73,19 @@ export default function Home() {
         </div>
       </section>
 
+      {/* QUIÉNES SOMOS */}
+      <section className="section section--muted">
+        <div className="container">
+          <h2>{t("about.title")}</h2>
+          <p>{t("about.p1")}</p>
+          <ul className="list">
+            {aboutBullets.map((x, i) => (
+              <li key={i}>{x}</li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
       {/* CONTACTO */}
       <section className="section" id="contacto">
         <div className="container contact">
@@ -105,19 +118,6 @@ export default function Home() {
           <div className="contact__map">
             <div className="map-placeholder">Mapa / Imagen</div>
           </div>
-        </div>
-      </section>
-
-      {/* QUIÉNES SOMOS */}
-      <section className="section section--muted">
-        <div className="container">
-          <h2>{t("about.title")}</h2>
-          <p>{t("about.p1")}</p>
-          <ul className="list">
-            {aboutBullets.map((x, i) => (
-              <li key={i}>{x}</li>
-            ))}
-          </ul>
         </div>
       </section>
     </>

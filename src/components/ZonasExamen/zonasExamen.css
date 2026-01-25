@@ -27,8 +27,11 @@
   font-size: 0.95rem;
 }
 
-.zonas-examen__search {
+.zonas-examen__search-container {
   margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .search-input {
@@ -41,6 +44,40 @@
   font-family: inherit;
   background: #fff;
   transition: border-color 0.2s;
+}
+
+.city-filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.city-filter-btn {
+  padding: 10px 20px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.city-filter-btn:hover {
+  border-color: var(--brand);
+  background: rgba(46, 125, 50, 0.05);
+}
+
+.city-filter-btn.active {
+  background: var(--brand);
+  color: #fff;
+  border-color: var(--brand);
+}
+
+.city-filter-btn:active {
+  transform: scale(0.98);
 }
 
 .search-input:focus {
@@ -165,6 +202,21 @@
 
   .zonas-examen__description {
     font-size: 1rem;
+  }
+
+  .zonas-examen__search-container {
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .search-input {
+    flex: 0 0 auto;
+  }
+
+  .city-filters {
+    flex: 1;
+    justify-content: flex-start;
   }
 
   .zones-grid {

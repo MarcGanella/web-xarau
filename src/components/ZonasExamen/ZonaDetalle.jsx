@@ -1,9 +1,40 @@
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import { zonasExamenMock } from "./mockData";
 import "./zonaDetalle.css";
 
 export default function ZonaDetalle() {
   const { t } = useTranslation("zoneDetail");
+  const { slug } = useParams();
+
+  const zona = zonasExamenMock.find((z) => z.slug === slug);
+
+  if (!zona) {
+    return (
+      <div className="zona-detalle">
+        <div className="zona-detalle__breadcrumb">
+          <div className="container">
+            <Link to="/">{t("breadcrumb.home")}</Link>
+            <span className="separator">/</span>
+            <Link to="/zonas">{t("breadcrumb.zones")}</Link>
+            <span className="separator">/</span>
+            <span>Zona no encontrada</span>
+          </div>
+        </div>
+        <div className="zona-detalle__content">
+          <div className="container">
+            <h1>Zona no encontrada</h1>
+            <p>La zona que buscas no existe o ha sido eliminada.</p>
+            <div className="zona-detalle__back">
+              <Link to="/zonas" className="btn">
+                {t("backButton")}
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   const images = [
     "https://images.unsplash.com/photo-1524661135-423995f22d0b?w=800&h=500&fit=crop",
@@ -45,20 +76,28 @@ export default function ZonaDetalle() {
 
       <div className="zona-detalle__content">
         <div className="container">
-          <h1>{t("title")}</h1>
+          <h1>{zona.nombre}</h1>
 
           <section className="zona-detalle__section">
-            <h2>{t("departure.title")}</h2>
-            <p className="zona-detalle__street">{t("departure.street")}</p>
-            <p>{t("departure.description1")}</p>
-            <p>{t("departure.description2")}</p>
+            <h2 className="zona-detalle__street">{zona.descripcion}</h2>
+            <p>{zona.descripcionCorta}</p>
+            {zona.infoUrl && (
+              <a
+                href={zona.infoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-info"
+              >
+                Más información
+              </a>
+            )}
           </section>
 
           <section className="zona-detalle__gallery">
             <div className="gallery-grid">
               {images.map((img, i) => (
                 <div key={i} className="gallery-item">
-                  <img src={img} alt={`${t("title")} - ${i + 1}`} />
+                  <img src={img} alt={`${zona.nombre} - ${i + 1}`} />
                 </div>
               ))}
             </div>
