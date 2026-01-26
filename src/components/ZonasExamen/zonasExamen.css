@@ -66,14 +66,14 @@
 }
 
 .city-filter-btn:hover {
-  border-color: var(--brand);
+  border-color: var(--brand-600);
   background: rgba(46, 125, 50, 0.05);
 }
 
 .city-filter-btn.active {
-  background: var(--brand);
+  background: var(--brand-600);
   color: #fff;
-  border-color: var(--brand);
+  border-color: var(--brand-600);
 }
 
 .city-filter-btn:active {
@@ -82,7 +82,7 @@
 
 .search-input:focus {
   outline: none;
-  border-color: var(--brand);
+  border-color: var(--brand-600);
   box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.1);
 }
 
@@ -159,7 +159,7 @@
 
 .btn-detail {
   display: inline-block;
-  background: var(--brand);
+  background: var(--brand-600);
   color: #fff;
   border: none;
   border-radius: 8px;

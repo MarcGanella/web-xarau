@@ -20,7 +20,7 @@
 }
 
 .zona-detalle__breadcrumb a {
-  color: var(--brand);
+  color: var(--brand-600);
   text-decoration: none;
 }
 
@@ -64,7 +64,7 @@
 
 .zona-detalle__street {
   font-weight: 600;
-  color: var(--brand);
+  color: var(--brand-600);
   margin-bottom: 12px;
 }
 
@@ -76,7 +76,7 @@
 
 .btn-info {
   display: inline-block;
-  background: var(--brand);
+  background: var(--brand-600);
   color: #fff;
   border: none;
   border-radius: 8px;
@@ -162,7 +162,7 @@
 }
 
 .dgt-links a {
-  color: var(--brand);
+  color: var(--brand-600);
   text-decoration: none;
   font-size: 0.95rem;
   display: inline-block;
@@ -181,7 +181,7 @@
 
 .zona-detalle__back .btn {
   display: inline-block;
-  background: var(--brand);
+  background: var(--brand-600);
   color: #fff;
   border: none;
   border-radius: 10px;

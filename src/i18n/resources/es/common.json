@@ -8,5 +8,11 @@
   "lang": {
     "es": "ES",
     "ca": "CA"
+  },
+  "footer": {
+    "privacy": "Política de privacidad",
+    "legal": "Nota legal",
+    "cookies": "Cookies",
+    "returns": "Política de compras y devoluciones"
   }
 }

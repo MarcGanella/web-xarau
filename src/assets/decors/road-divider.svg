@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 80" preserveAspectRatio="none">
+  <defs>
+    <pattern id="roadDash" x="0" y="0" width="40" height="80" patternUnits="userSpaceOnUse">
+      <rect x="16" y="0" width="8" height="20" fill="#fff" opacity="0.8"/>
+      <rect x="16" y="30" width="8" height="20" fill="#fff" opacity="0.8"/>
+      <rect x="16" y="60" width="8" height="20" fill="#fff" opacity="0.8"/>
+    </pattern>
+  </defs>
+  <path d="M0,10 Q300,40 600,10 T1200,10 L1200,70 Q900,40 600,70 T0,70 Z" fill="#6B7785" opacity="0.15"/>
+  <rect x="0" y="30" width="1200" height="20" fill="url(#roadDash)"/>
+</svg>
