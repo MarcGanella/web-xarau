@@ -11,6 +11,9 @@
     "description1": "La sortida de la zona 3 està situada al costat del camp de futbol, al carrer de l'Apúlia. És un carrer de doble sentit.",
     "description2": "En aquesta zona l'estacionament es realitza en un costat en línia i en l'altre en diagonal o oblic."
   },
+  "map": {
+    "title": "Ubicació"
+  },
   "dgtLinks": {
     "title": "Enllaços de la DGT",
     "safety": "Consells seguretat vial",

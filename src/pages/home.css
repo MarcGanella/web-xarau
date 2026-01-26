@@ -130,6 +130,21 @@
 .contact__list li {
   margin: 6px 0;
 }
+.contact__map {
+  width: 100%;
+  min-height: 240px;
+}
+
+.contact__mapImage {
+  width: 100%;
+  height: auto;
+  min-height: 240px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  display: block;
+  object-fit: cover;
+}
+
 .map-placeholder {
   height: 240px;
   border: 1px dashed var(--line);

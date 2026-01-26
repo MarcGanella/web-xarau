@@ -97,6 +97,22 @@
   transform: scale(0.98);
 }
 
+.zona-detalle__map {
+  margin-bottom: 32px;
+}
+
+.zona-detalle__map h3 {
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+  color: var(--ink);
+}
+
+.zona-detalle__map iframe {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+}
+
 .zona-detalle__gallery {
   margin-bottom: 32px;
 }

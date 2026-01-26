@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import MapEmbed from "../components/MapEmbed";
 import "./home.css";
 
 import heroMobile from "../assets/hero-mobile.jpg";
@@ -11,6 +12,7 @@ export default function Home() {
   const examWhat = t("exams.what.items", { returnObjects: true });
   const examWhere = t("exams.where.items", { returnObjects: true });
   const aboutBullets = t("about.bullets", { returnObjects: true });
+  const contactAddress = t("contact.address");
 
   return (
     <>
@@ -74,7 +76,7 @@ export default function Home() {
       </section>
 
       {/* QUIÉNES SOMOS */}
-      <section className="section section--muted">
+      <section className="section section--muted" id="quienes-somos">
         <div className="container">
           <h2>{t("about.title")}</h2>
           <p>{t("about.p1")}</p>
@@ -116,7 +118,7 @@ export default function Home() {
             </a>
           </div>
           <div className="contact__map">
-            <div className="map-placeholder">Mapa / Imagen</div>
+            <MapEmbed address={contactAddress} height={320} />
           </div>
         </div>
       </section>

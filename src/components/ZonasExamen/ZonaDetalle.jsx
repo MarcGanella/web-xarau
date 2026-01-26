@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Link, useParams } from "react-router-dom";
 import { zonasExamenMock } from "./mockData";
+import MapEmbed from "../MapEmbed";
 import "./zonaDetalle.css";
 
 export default function ZonaDetalle() {
@@ -36,6 +37,8 @@ export default function ZonaDetalle() {
     );
   }
 
+  const address = zona.descripcion || zona.address;
+
   const images = [
     "https://images.unsplash.com/photo-1524661135-423995f22d0b?w=800&h=500&fit=crop",
     "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=800&h=500&fit=crop",
@@ -70,7 +73,7 @@ export default function ZonaDetalle() {
           <span className="separator">/</span>
           <Link to="/zonas">{t("breadcrumb.zones")}</Link>
           <span className="separator">/</span>
-          <span>{t("breadcrumb.current")}</span>
+          <span>{zona.nombre}</span>
         </div>
       </div>
 
@@ -91,6 +94,11 @@ export default function ZonaDetalle() {
                 Más información
               </a>
             )}
+          </section>
+
+          <section className="zona-detalle__map">
+            <h3>{t("map.title")}</h3>
+            <MapEmbed address={address} height={360} />
           </section>
 
           <section className="zona-detalle__gallery">

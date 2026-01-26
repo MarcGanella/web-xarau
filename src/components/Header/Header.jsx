@@ -9,7 +9,7 @@ const LANG_ICON_SRC = `${import.meta.env.BASE_URL}tierra.png`;
 
 export default function Header() {
   const [open, setOpen] = useState(false);
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
   const { t, i18n } = useTranslation("common");
 
   const isActive = (path) =>
@@ -77,19 +77,21 @@ export default function Header() {
         <nav id="site-nav" className={`nav ${open ? "open" : ""}`}>
           <div className="container">
             <Link
-              to="/quienes-somos"
-              className={isActive("/quienes-somos") ? "active" : ""}
+              to="/#quienes-somos"
+              className={
+                pathname === "/" && hash === "#quienes-somos" ? "active" : ""
+              }
               onClick={close}
             >
               {t("menu.about")}
             </Link>
-            <Link
+            {/* <Link
               to="/precios"
               className={isActive("/precios") ? "active" : ""}
               onClick={close}
             >
               {t("menu.prices")}
-            </Link>
+            </Link> */}
             <Link
               to="/zonas"
               className={isActive("/zonas") ? "active" : ""}
