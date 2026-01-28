@@ -7,12 +7,12 @@ import "./home/home.css";
 
 export default function Home() {
   return (
-    <>
+    <main className="page">
       <Hero />
       <Advantages />
       <ExamsB />
       <AboutUs />
       <ContactBlock />
-    </>
+    </main>
   );
 }

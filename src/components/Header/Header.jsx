@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { IoLanguageOutline } from "react-icons/io5"; // icono de idioma
-import logo from "../../assets/xarau-logo.svg";
+import logo from "../../assets/xarau-logo.png";
 import menuIcon from "../../assets/menu.png";
 import "./header.css";
 const LANG_ICON_SRC = `${import.meta.env.BASE_URL}tierra.png`;

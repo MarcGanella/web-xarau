@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import miniCar from "../../assets/mini-car.png";
 
 export default function ExamsB() {
   const { t } = useTranslation("home");
@@ -35,62 +36,50 @@ export default function ExamsB() {
         <div className="exams-b__road-divider" aria-hidden="true">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1200 80"
-            preserveAspectRatio="none"
+            viewBox="0 0 1200 140"
+            preserveAspectRatio="xMidYMid meet"
+            className="road-svg"
           >
             <defs>
-              <pattern
-                id="roadDash"
-                x="0"
-                y="0"
-                width="40"
-                height="80"
-                patternUnits="userSpaceOnUse"
-              >
-                <rect
-                  x="16"
-                  y="0"
-                  width="8"
-                  height="20"
-                  fill="#fff"
-                  opacity="0.8"
-                />
-                <rect
-                  x="16"
-                  y="30"
-                  width="8"
-                  height="20"
-                  fill="#fff"
-                  opacity="0.8"
-                />
-                <rect
-                  x="16"
-                  y="60"
-                  width="8"
-                  height="20"
-                  fill="#fff"
-                  opacity="0.8"
-                />
-              </pattern>
+              <path
+                id="roadPath"
+                d="M1200,70 C900,30 750,110 600,70 C450,30 300,110 0,70"
+              />
             </defs>
+
             <path
-              d="M0,10 Q300,40 600,10 T1200,10 L1200,70 Q900,40 600,70 T0,70 Z"
-              fill="currentColor"
+              d="M1200,70 C900,30 750,110 600,70 C450,30 300,110 0,70"
+              stroke="currentColor"
+              strokeWidth="50"
+              strokeLinecap="round"
+              fill="none"
               opacity="0.15"
             />
-            <rect x="0" y="30" width="1200" height="20" fill="url(#roadDash)" />
+
+            <path
+              d="M1200,70 C900,30 750,110 600,70 C450,30 300,110 0,70"
+              fill="none"
+              stroke="#fff"
+              strokeWidth="4"
+              strokeDasharray="20 16"
+              strokeLinecap="round"
+              opacity="0.85"
+            ></path>
+
+            <g transform="translate(-32,-18)" aria-hidden="true">
+              <image href={miniCar} width="64" height="36">
+                <animateMotion
+                  dur="8s"
+                  repeatCount="indefinite"
+                  keyTimes="0;1"
+                  keySplines="0.42 0 0.58 1"
+                  calcMode="spline"
+                >
+                  <mpath href="#roadPath" />
+                </animateMotion>
+              </image>
+            </g>
           </svg>
-          <div className="mini-car" role="presentation">
-            <svg width="60" height="32" viewBox="0 0 60 32" fill="none">
-              <path
-                d="M10 20 L15 12 L25 12 L30 8 L40 8 L45 12 L50 20 L48 24 L12 24 Z"
-                fill="currentColor"
-                opacity="0.7"
-              />
-              <circle cx="18" cy="24" r="4" fill="currentColor" />
-              <circle cx="42" cy="24" r="4" fill="currentColor" />
-            </svg>
-          </div>
         </div>
       </div>
     </section>

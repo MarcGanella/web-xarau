@@ -5,11 +5,9 @@
   display: flex;
   align-items: center;
   overflow: hidden;
-  background: linear-gradient(
-    135deg,
-    var(--brand-500) 0%,
-    var(--brand-600) 100%
-  );
+  background: var(--brand-100);
+  margin-top: calc(-1 * var(--header-h));
+  padding-top: var(--header-h);
 }
 
 .hero__bg {
@@ -27,16 +25,7 @@
   display: block;
 }
 
-.hero__overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(0, 122, 51, 0.75) 0%,
-    rgba(10, 143, 71, 0.65) 100%
-  );
-  z-index: 1;
-}
+/* pm  */
 
 .hero__content {
   position: relative;
@@ -69,7 +58,7 @@
   width: 100%;
   height: 80px;
   z-index: 3;
-  color: var(--bg);
+  color: var(--brand-100);
 }
 
 .hero__wave svg {
@@ -81,7 +70,7 @@
 /* ===== ADVANTAGES ===== */
 .advantages {
   padding: 80px 0;
-  background: var(--bg);
+  background: var(--brand-100);
 }
 
 .advantages__title {
@@ -213,30 +202,23 @@
 .exams-b__road-divider {
   position: relative;
   width: 100%;
-  height: 80px;
+  height: 100px;
   margin-top: 40px;
   color: var(--muted-500);
+  overflow: hidden;
 }
 
-.exams-b__road-divider svg {
+.road-svg {
+  display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
-.mini-car {
-  position: absolute;
-  bottom: 20px;
-  left: 10%;
-  color: var(--ink-600);
-  animation: drive 8s linear infinite;
-}
-
-@keyframes drive {
-  from {
-    left: -60px;
-  }
-  to {
-    left: calc(100% + 60px);
+@media (prefers-reduced-motion: reduce) {
+  .road-svg animate,
+  .road-svg animateMotion {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
   }
 }
 
@@ -267,6 +249,35 @@
 .about-us .container {
   position: relative;
   z-index: 1;
+}
+
+.about-us__content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .about-us__content {
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+  }
+}
+
+.about-us__media {
+  width: 100%;
+  border-radius: var(--radius-m);
+  overflow: hidden;
+  box-shadow: var(--shadow-2);
+}
+
+.about-us__media img {
+  width: 100%;
+  height: 100%;
+  max-height: 360px;
+  object-fit: cover;
+  display: block;
 }
 
 .about-us__title {
@@ -396,7 +407,6 @@
 .contact-block__map iframe {
   display: block;
   width: 100%;
-  border-radius: var(--radius-m);
 }
 
 /* ===== BUTTONS ===== */

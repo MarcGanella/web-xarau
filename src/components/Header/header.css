@@ -183,8 +183,8 @@ body {
 /* ===== Tablet/desktop ===== */
 @media (min-width: 768px) {
   :root {
-    --header-h: 72px;
-  } /* header un poco más alto */
+    --header-h: 84px;
+  } /* header más alto */
   .logo img {
     width: 130px;
   }
@@ -245,7 +245,4 @@ body {
   .logo img {
     width: 140px;
   }
-}
-.page {
-  padding-top: calc(var(--header-h) + 8px);
 }

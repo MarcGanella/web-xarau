@@ -12,7 +12,7 @@ export default function ZonaDetalle() {
 
   if (!zona) {
     return (
-      <div className="zona-detalle">
+      <main className="zona-detalle page">
         <div className="zona-detalle__breadcrumb">
           <div className="container">
             <Link to="/">{t("breadcrumb.home")}</Link>
@@ -33,7 +33,7 @@ export default function ZonaDetalle() {
             </div>
           </div>
         </div>
-      </div>
+      </main>
     );
   }
 
@@ -66,7 +66,7 @@ export default function ZonaDetalle() {
   ];
 
   return (
-    <div className="zona-detalle">
+    <main className="zona-detalle page">
       <div className="zona-detalle__breadcrumb">
         <div className="container">
           <Link to="/">{t("breadcrumb.home")}</Link>
@@ -137,6 +137,6 @@ export default function ZonaDetalle() {
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 }

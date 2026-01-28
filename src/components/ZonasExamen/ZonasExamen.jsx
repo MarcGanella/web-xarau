@@ -18,7 +18,7 @@ export default function ZonasExamen() {
   });
 
   return (
-    <div className="zonas-examen">
+    <main className="zonas-examen page">
       <div className="zonas-examen__header">
         <div className="container">
           <h1>{t("title")}</h1>
@@ -82,6 +82,6 @@ export default function ZonasExamen() {
           )}
         </div>
       </div>
-    </div>
+    </main>
   );
 }

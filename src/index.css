@@ -59,6 +59,6 @@ ul {
 }
 
 .page {
-  padding-top: calc(var(--header-h) + 8px);
+  padding-top: var(--header-h);
   flex: 1;
 }

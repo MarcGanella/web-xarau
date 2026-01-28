@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import xarauCars from "../../assets/xarauCars.jpg";
 
 export default function AboutUs() {
   const { t } = useTranslation("home");
@@ -29,28 +30,40 @@ export default function AboutUs() {
         </svg>
       </div>
       <div className="container">
-        <h2 id="about-title" className="about-us__title">
-          {t("about.title")}
-        </h2>
-        <p className="about-us__intro">{t("about.p1")}</p>
-        <ul className="about-us__list">
-          {bullets.map((bullet, i) => (
-            <li key={i}>
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                aria-hidden="true"
-              >
-                <polyline points="20 6 9 17 4 12" />
-              </svg>
-              <span>{bullet}</span>
-            </li>
-          ))}
-        </ul>
+        <div className="about-us__content">
+          <div className="about-us__text">
+            <h2 id="about-title" className="about-us__title">
+              {t("about.title")}
+            </h2>
+            <p className="about-us__intro">{t("about.p1")}</p>
+            <ul className="about-us__list">
+              {bullets.map((bullet, i) => (
+                <li key={i}>
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    aria-hidden="true"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  <span>{bullet}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="about-us__media">
+            <img
+              src={xarauCars}
+              alt="Autoescola XARAU"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
       </div>
     </section>
   );
